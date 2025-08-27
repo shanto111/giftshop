@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 const fetchSingleProduct = async (id) => {
-  const res = await fetch(`/api/product/${id}`);
+  const res = await fetch(`${PUBLIC_URL}/api/product/${id}`);
   if (!res.ok) throw new Error("Failed to fetch single product");
   return res.json();
 };
